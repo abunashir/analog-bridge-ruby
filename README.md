@@ -1,24 +1,30 @@
-# Analogbridge
+# Analog Bridge
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/analogbridge`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Build
+Status](https://travis-ci.org/analogbridge/analog-bridge-ruby.svg?branch=master)](https://travis-ci.org/analogbridge/analog-bridge-ruby)
 
-TODO: Delete this and the text above, and describe your gem
+Analog Bridge is comprised of a JavaScript client and REST API which enables
+your users to import analog media directly into your app or website.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'analogbridge'
+gem "analogbridge", github: "analogbridge/analog-bridge-ruby"
 ```
 
 And then execute:
 
-    $ bundle
+```sh
+$ bundle install
+```
 
 Or install it yourself as:
 
-    $ gem install analogbridge
+```sh
+$ gem install analogbridge
+```
 
 ## Usage
 
@@ -32,10 +38,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/analogbridge. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/analogbridge/analog-bridge-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
