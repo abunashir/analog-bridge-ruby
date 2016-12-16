@@ -1,0 +1,18 @@
+[
+  {
+    "name": "35mm Slides",
+    "price": 0.69,
+    "url": "https://analogbridge.s3.amazonaws.com/images/format_35mmslides.jpg",
+    "product_id": 13,
+    "unit_name": "slide",
+    "category_name": "image"
+  },
+  {
+    "name": "Super 8mm Film",
+    "price": 14.5,
+    "url": "https://analogbridge.s3.amazonaws.com/images/format_super8.jpg",
+    "product_id": 16,
+    "unit_name": "50ft reel",
+    "category_name": "film"
+  }
+]

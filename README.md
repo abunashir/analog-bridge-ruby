@@ -28,7 +28,13 @@ $ gem install analogbridge
 
 ## Usage
 
-TODO: Write usage instructions here
+### Listing Product
+
+To retrieve the `products` simply use the following interface
+
+```ruby
+Analog::Product.all
+```
 
 ## Development
 
