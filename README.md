@@ -124,6 +124,17 @@ then we can use
 AnalogBridge::Order.where(customer_id: "cus_12345678")
 ```
 
+#### List a order details
+
+If we need to retrieve the details for a specific order then we can use
+
+```ruby
+AnalogBridge::Order.where(
+  order_id: "order_12345678",
+  customer_id: "cus_12345678"
+)
+```
+
 ### Listing Product
 
 To retrieve the `products` simply use the following interface
