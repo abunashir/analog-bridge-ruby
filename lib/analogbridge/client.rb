@@ -2,7 +2,7 @@ require "rest-client"
 require "analogbridge/configuration"
 require "analogbridge/response"
 
-module Analogbridge
+module AnalogBridge
   class Client
     attr_reader :http_method, :end_point, :attributes
 
@@ -28,7 +28,7 @@ module Analogbridge
     end
 
     def api_end_point
-      [Analogbridge.configuration.api_host, end_point].join("/")
+      [AnalogBridge.configuration.api_host, end_point].join("/")
     end
   end
 

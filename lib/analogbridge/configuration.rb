@@ -1,4 +1,4 @@
-module Analogbridge
+module AnalogBridge
   class Configuration
     attr_reader :api_base, :api_version
 

@@ -1,7 +1,7 @@
-module Analogbridge
+module AnalogBridge
   class Product
     def all
-      Analogbridge.get_resource("products")
+      AnalogBridge.get_resource("products")
     end
 
     def self.all

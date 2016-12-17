@@ -17,7 +17,7 @@ module FakeAnalogbridgeApi
   end
 
   def api_end_point(end_point)
-    [Analogbridge.configuration.api_host, end_point].join("/")
+    [AnalogBridge.configuration.api_host, end_point].join("/")
   end
 
   def api_request_headers(data:)

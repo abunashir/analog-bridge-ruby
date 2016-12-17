@@ -33,7 +33,7 @@ $ gem install analogbridge
 To retrieve the `products` simply use the following interface
 
 ```ruby
-Analog::Product.all
+AnalogBridge::Product.all
 ```
 
 ## Development

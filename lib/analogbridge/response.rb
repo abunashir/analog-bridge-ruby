@@ -1,6 +1,6 @@
 require "json"
 
-module Analogbridge
+module AnalogBridge
   class Response
     attr_reader :response
 

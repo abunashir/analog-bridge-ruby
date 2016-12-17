@@ -5,7 +5,7 @@ require "analogbridge/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "analogbridge"
-  spec.version       = Analogbridge::VERSION
+  spec.version       = AnalogBridge::VERSION
   spec.authors       = ["Analog Bridge"]
   spec.email         = ["support@analogbridge.io"]
 
