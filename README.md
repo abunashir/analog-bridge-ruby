@@ -112,6 +112,18 @@ use
 AnalogBridge::Customer.delete("cus_123456789")
 ```
 
+### Order
+
+#### List all orders
+
+The Analog Bridge API allow us to retrieve all orders by specific `customer`.
+For example we want to retrieve all the `order` by a customer id `cus_12345678`
+then we can use
+
+```ruby
+AnalogBridge::Order.where(customer_id: "cus_12345678")
+```
+
 ### Listing Product
 
 To retrieve the `products` simply use the following interface

@@ -46,6 +46,15 @@ module FakeAnalogbridgeApi
     )
   end
 
+  def stub_analogbridge_order_listing(customer_id:)
+    stub_api_response(
+      :get,
+      ["customers", customer_id, "orders"].join("/"),
+      filename: "orders",
+      status: 200,
+    )
+  end
+
   def stub_analogbridge_product_listing
     stub_api_response(
       :get,
