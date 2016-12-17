@@ -23,7 +23,7 @@ module AnalogBridge
         method: http_method,
         url: api_end_point,
         payload: attributes,
-        headers: {},
+        user: AnalogBridge.configuration.secret_key,
       )
     end
 
@@ -34,5 +34,9 @@ module AnalogBridge
 
   def self.get_resource(end_point)
     Client.new(:get, end_point).execute
+  end
+
+  def self.post_resource(end_point, attributes)
+    Client.new(:post, end_point, attributes).execute
   end
 end

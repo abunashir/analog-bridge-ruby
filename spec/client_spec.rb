@@ -10,9 +10,23 @@ RSpec.describe AnalogBridge::Client do
     end
   end
 
+  describe ".post_resource" do
+    it "submit the request via :post" do
+      stub_post_ping_request
+      resource = AnalogBridge.post_resource("ping", {})
+
+      expect(resource.data).to eq("Pong!")
+    end
+  end
+
   def stub_get_resource_request(end_point)
     stub_request(
       :get, [AnalogBridge.configuration.api_host, end_point].join("/")
     ).and_return(status: 200, body: JSON.generate(data: "Pong!"))
+  end
+
+  def stub_post_ping_request
+    stub_request(:post, "https://api.analogbridge.io/v1/ping").
+      to_return(status: 200, body: JSON.generate(data: "Pong!"))
   end
 end

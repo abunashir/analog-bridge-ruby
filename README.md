@@ -45,6 +45,31 @@ AnalogBridge.configuration.secret_key = "YOUR_SECRET_KEY"
 
 ## Usage
 
+### Customer
+
+#### Create Customer
+
+To create a new customer using the API, usage
+
+```ruby
+AnalogBridge::Customer.create(
+  email: "demo@analogbridge.io",
+  shipping: {
+    first_name: "John",
+    last_name: "Smith",
+    address1: "3336 Commercial Ave",
+    city: "Northbrook",
+    state: "IL",
+    zip: "60062",
+    phone: "800-557-3508",
+    email: "demo@analogbridge.io"
+  },
+  metadata: {
+    user_id: "123456",
+  }
+)
+```
+
 ### Listing Product
 
 To retrieve the `products` simply use the following interface

@@ -1,4 +1,14 @@
 module FakeAnalogbridgeApi
+  def stub_analogbridge_customer_create(attributes)
+    stub_api_response(
+      :post,
+      "customers",
+      data: attributes,
+      filename: "customer_created",
+      status: 200,
+    )
+  end
+
   def stub_analogbridge_product_listing
     stub_api_response(
       :get,
@@ -23,11 +33,12 @@ module FakeAnalogbridgeApi
   def api_request_headers(data:)
     Hash.new.tap do |request_headers|
       request_headers[:body] = data
+      request_headers[:headers] = api_authorization_headers
     end
   end
 
   def api_authorization_headers
-    {}
+    { "Authorization" => "Basic U0VDUkVUX0FQSV9LRVk6" }
   end
 
   def response_with(filename:, status:)
