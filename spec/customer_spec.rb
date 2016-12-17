@@ -36,6 +36,18 @@ RSpec.describe AnalogBridge::Customer do
     end
   end
 
+  describe ".delete" do
+    it "deletes a specified customer" do
+      customer_id = "cus_28b70539d2b10be293bdeb3c"
+      stub_analogbridge_customer_delete(customer_id)
+      customer = AnalogBridge::Customer.delete(customer_id)
+
+      expect(customer.deleted).not_to be_nil
+      expect(customer.cus_id).to eq(customer_id)
+      expect(customer.deleted).not_to be_nil
+    end
+  end
+
   def customer_attributes
     {
       email: "demo@analogbridge.io",

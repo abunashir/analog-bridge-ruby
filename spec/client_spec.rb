@@ -19,6 +19,15 @@ RSpec.describe AnalogBridge::Client do
     end
   end
 
+  describe ".delete_resource" do
+    it "submits the request via :delete" do
+      stub_delete_ping_request
+      resource = AnalogBridge.delete_resource("ping")
+
+      expect(resource.data).to eq("Pong!")
+    end
+  end
+
   def stub_get_resource_request(end_point)
     stub_request(
       :get, [AnalogBridge.configuration.api_host, end_point].join("/")
@@ -27,6 +36,11 @@ RSpec.describe AnalogBridge::Client do
 
   def stub_post_ping_request
     stub_request(:post, "https://api.analogbridge.io/v1/ping").
+      to_return(status: 200, body: JSON.generate(data: "Pong!"))
+  end
+
+  def stub_delete_ping_request
+    stub_request(:delete, "https://api.analogbridge.io/v1/ping").
       to_return(status: 200, body: JSON.generate(data: "Pong!"))
   end
 end

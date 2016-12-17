@@ -28,6 +28,15 @@ module FakeAnalogbridgeApi
     )
   end
 
+  def stub_analogbridge_customer_delete(customer_id)
+    stub_api_response(
+      :delete,
+      ["customers", customer_id].join("/"),
+      filename: "customer_deleted",
+      status: 200,
+    )
+  end
+
   def stub_analogbridge_product_listing
     stub_api_response(
       :get,

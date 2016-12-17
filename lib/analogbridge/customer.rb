@@ -15,5 +15,11 @@ module AnalogBridge
         ["customers", customer_id].join("/"), attributes
       ).data
     end
+
+    def delete(customer_id)
+      AnalogBridge.delete_resource(
+        ["customers", customer_id].join("/"),
+      ).data
+    end
   end
 end

@@ -1,0 +1,9 @@
+{
+  "success": "success",
+  "message": "Customer deleted successfully",
+  "data" : {
+    "cus_id": "cus_28b70539d2b10be293bdeb3c",
+    "deleted": 1481325743
+  }
+}
+

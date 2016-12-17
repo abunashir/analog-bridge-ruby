@@ -93,6 +93,16 @@ AnalogBridge::Customer.update(
 )
 ```
 
+#### Delete a customer
+
+If we need to delete a customer for some reason, then the API got us covered,
+for example if we want to delete a customer with id `cus_123456789` then we can
+use
+
+```ruby
+AnalogBridge::Customer.delete("cus_123456789")
+```
+
 ### Listing Product
 
 To retrieve the `products` simply use the following interface

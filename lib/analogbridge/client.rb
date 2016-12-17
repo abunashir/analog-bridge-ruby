@@ -39,4 +39,8 @@ module AnalogBridge
   def self.post_resource(end_point, attributes)
     Client.new(:post, end_point, attributes).execute
   end
+
+  def self.delete_resource(end_point)
+    Client.new(:delete, end_point).execute
+  end
 end
