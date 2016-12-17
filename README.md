@@ -79,6 +79,15 @@ example to find a customer with details with id `cus_12345678`
 AnalogBridge::Customer.find("cus_12345678")
 ```
 
+### Retrieve all customers
+
+Analog Bridge provides an interface to retrieve all your customers very easily,
+to retrieve all of your customers, you can use
+
+```ruby
+AnalogBridge::Customer.list(limit: 20, offset: 100)
+```
+
 #### Update a customer
 
 Update an existing customer's information by using the `cus_id` from customer

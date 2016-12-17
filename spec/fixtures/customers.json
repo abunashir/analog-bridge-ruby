@@ -1,0 +1,26 @@
+{
+  "offset": 10,
+  "limit": 20,
+  "total_count": 102,
+  "list": [
+    {
+      "cus_id": "cus_e6bd1537e138d2c3495cdb57",
+      "email": "test@test.com",
+      "metadata": {
+        "user_id": 123456,
+        "custom": {
+          "a": "2",
+          "b": "3"
+        }
+      }
+    },
+    {
+      "cus_id": "cus_d5026c9fee3c48b7d5809682",
+      "email": "demo@analogbridge.io",
+      "metadata": {
+        "user_id": 1234567
+      }
+    }
+  ]
+}
+

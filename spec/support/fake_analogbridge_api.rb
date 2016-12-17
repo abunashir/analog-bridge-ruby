@@ -1,4 +1,13 @@
 module FakeAnalogbridgeApi
+  def stub_analogbridge_customer_listting(limit:, offset:)
+    stub_api_response(
+      :get,
+      "customers?limit=#{limit}&offset=#{offset}",
+      filename: "customers",
+      status: 200,
+    )
+  end
+
   def stub_analogbridge_customer_create(attributes)
     stub_api_response(
       :post,

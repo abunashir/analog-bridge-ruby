@@ -48,6 +48,19 @@ RSpec.describe AnalogBridge::Customer do
     end
   end
 
+  describe ".all" do
+    it "retrieve all the customers" do
+      filters = { limit: "2", offset: "10" }
+      stub_analogbridge_customer_listting(filters)
+      customers = AnalogBridge::Customer.all(filters)
+
+      expect(customers.offset).to eq(10)
+      expect(customers.list.count).to eq(2)
+      expect(customers.total_count).to eq(102)
+      expect(customers.list.last.email).to eq("demo@analogbridge.io")
+    end
+  end
+
   def customer_attributes
     {
       email: "demo@analogbridge.io",
