@@ -26,6 +26,23 @@ Or install it yourself as:
 $ gem install analogbridge
 ```
 
+## Configure
+
+Once you have your API Secret keys from Analog Bridge, then you can add an
+initializer to set up your `secret_key` as
+
+```ruby
+AnalogBridge.configure do |config|
+  config.secret_key = "YOUR_SECRET_KEY"
+end
+```
+
+Or
+
+```ruby
+AnalogBridge.configuration.secret_key = "YOUR_SECRET_KEY"
+```
+
 ## Usage
 
 ### Listing Product

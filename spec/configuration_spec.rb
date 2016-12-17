@@ -10,4 +10,14 @@ RSpec.describe AnalogBridge::Configuration do
       expect(configuration.api_host).to eq(api_host)
     end
   end
+
+  describe "#secret_key" do
+    it "returns the configured secret key" do
+      AnalogBridge.configure do |config|
+        config.secret_key = "SECURE_SECRET_KEY"
+      end
+
+      expect(AnalogBridge.configuration.secret_key).to eq("SECURE_SECRET_KEY")
+    end
+  end
 end
