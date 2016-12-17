@@ -28,4 +28,14 @@ RSpec.describe AnalogBridge::Order do
       end
     end
   end
+
+  describe ".import_ready" do
+    it "retrieve all the import ready orders" do
+      stub_analogbridge_order_import_ready
+      orders = AnalogBridge::Order.import_ready
+
+      expect(orders.count).to eq(2)
+      expect(orders.first.cus_id).not_to be_nil
+    end
+  end
 end

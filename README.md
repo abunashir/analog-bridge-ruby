@@ -135,6 +135,14 @@ AnalogBridge::Order.where(
 )
 ```
 
+#### Retrieve import ready orders
+
+To retrieve the list of of import ready orders, we can use
+
+```ruby
+AnalogBridge::Order.import_ready
+```
+
 ### Listing Product
 
 To retrieve the `products` simply use the following interface

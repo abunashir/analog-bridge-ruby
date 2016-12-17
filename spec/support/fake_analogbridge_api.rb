@@ -64,6 +64,15 @@ module FakeAnalogbridgeApi
     )
   end
 
+  def stub_analogbridge_order_import_ready
+    stub_api_response(
+      :get,
+      "orders/import-ready",
+      filename: "import_ready_orders",
+      status: 200,
+    )
+  end
+
   def stub_analogbridge_product_listing
     stub_api_response(
       :get,
