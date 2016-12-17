@@ -18,6 +18,16 @@ module FakeAnalogbridgeApi
     )
   end
 
+  def stub_analogbridge_customer_update(customer_id, attributes)
+    stub_api_response(
+      :post,
+      ["customers", customer_id].join("/"),
+      data: attributes,
+      filename: "customer_created",
+      status: 200,
+    )
+  end
+
   def stub_analogbridge_product_listing
     stub_api_response(
       :get,

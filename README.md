@@ -70,13 +70,27 @@ AnalogBridge::Customer.create(
 )
 ```
 
-### Retrieve a Customer
+#### Retrieve a Customer
 
 We can easily retrieve a customer details using their `customer_id`, for
 example to find a customer with details with id `cus_12345678`
 
 ```ruby
 AnalogBridge::Customer.find("cus_12345678")
+```
+
+#### Update a customer
+
+Update an existing customer's information by using the `cus_id` from customer
+creation. Any unprovided parameters will have no effect on the customer object.
+The arguments for this call are mainly the same as for the customer creation
+call.
+
+```ruby
+AnalogBridge::Customer.update(
+  "cus_123456789",
+  email: "newemail@analogbridge.io"
+)
 ```
 
 ### Listing Product

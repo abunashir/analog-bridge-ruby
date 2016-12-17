@@ -9,5 +9,11 @@ module AnalogBridge
         ["customers", customer_id].join("/"),
       )
     end
+
+    def update(customer_id, attributes = {})
+      AnalogBridge.post_resource(
+        ["customers", customer_id].join("/"), attributes
+      ).data
+    end
   end
 end

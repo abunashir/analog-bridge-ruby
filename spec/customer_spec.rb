@@ -24,6 +24,18 @@ RSpec.describe AnalogBridge::Customer do
     end
   end
 
+  describe ".update" do
+    it "updates an existing customer details" do
+      customer_id = "cus_28b70539d2b10be293bdeb3c"
+      stub_analogbridge_customer_update(customer_id, customer_attributes)
+      customer = AnalogBridge::Customer.update(customer_id, customer_attributes)
+
+      expect(customer.cus_id).to eq(customer_id)
+      expect(customer.metadata.user_id).to eq(123456)
+      expect(customer.email).to eq("demo@analogbridge.io")
+    end
+  end
+
   def customer_attributes
     {
       email: "demo@analogbridge.io",
