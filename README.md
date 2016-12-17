@@ -70,6 +70,15 @@ AnalogBridge::Customer.create(
 )
 ```
 
+### Retrieve a Customer
+
+We can easily retrieve a customer details using their `customer_id`, for
+example to find a customer with details with id `cus_12345678`
+
+```ruby
+AnalogBridge::Customer.find("cus_12345678")
+```
+
 ### Listing Product
 
 To retrieve the `products` simply use the following interface

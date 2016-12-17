@@ -12,6 +12,18 @@ RSpec.describe AnalogBridge::Customer do
     end
   end
 
+  describe ".find" do
+    it "retrieves the specified customer" do
+      customer_id = "cus_28b70539d2b10be293bdeb3c"
+      stub_analogbridge_customer_find(customer_id)
+      customer = AnalogBridge::Customer.find(customer_id)
+
+      expect(customer.cus_id).to eq(customer_id)
+      expect(customer.metadata.user_id).to eq(123456)
+      expect(customer.email).to eq("demo@analogbridge.io")
+    end
+  end
+
   def customer_attributes
     {
       email: "demo@analogbridge.io",

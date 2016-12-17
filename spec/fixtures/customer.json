@@ -1,0 +1,22 @@
+{
+  "cus_id": "cus_28b70539d2b10be293bdeb3c",
+  "auth": "long_auth_token",
+  "expires": 1481310922,
+  "email": "demo@analogbridge.io",
+  "shipping": {
+    "first_name": "John",
+    "last_name": "Smith",
+    "company": null,
+    "address1": "3336 Commercial Ave",
+    "address2": null,
+    "city": "Northbrook",
+    "state": "IL",
+    "zip": "60062",
+    "country": "US",
+    "phone": "800-557-3508",
+    "email": "demo@analogbridge.io"
+  },
+  "metadata": {
+    "user_id": 123456
+  }
+}
