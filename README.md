@@ -4,6 +4,8 @@
 Status](https://travis-ci.org/analogbridge/analog-bridge-ruby.svg?branch=master)](https://travis-ci.org/analogbridge/analog-bridge-ruby)
 [![Code
 Climate](https://codeclimate.com/github/analogbridge/analog-bridge-ruby/badges/gpa.svg)](https://codeclimate.com/github/analogbridge/analog-bridge-ruby)
+[![Gem
+Version](https://badge.fury.io/rb/analogbridge.svg)](https://badge.fury.io/rb/analogbridge)
 
 Analog Bridge is comprised of a JavaScript client and REST API which enables
 your users to import analog media directly into your app or website.
@@ -13,7 +15,7 @@ your users to import analog media directly into your app or website.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "analogbridge", github: "analogbridge/analog-bridge-ruby"
+gem "analogbridge"
 ```
 
 And then execute:
