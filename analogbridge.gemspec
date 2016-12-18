@@ -6,17 +6,18 @@ require "analogbridge/version"
 Gem::Specification.new do |spec|
   spec.name          = "analogbridge"
   spec.version       = AnalogBridge::VERSION
-  spec.authors       = ["Analog Bridge"]
-  spec.email         = ["support@analogbridge.io"]
+  spec.authors       = ["Eugene Gekhter", "Abu Nashir"]
+  spec.email         = ["eg@gomemorable.com", "abunashir@gmail.com"]
 
-  spec.summary       = %q{The Ruby Interface to the Analog Bridge API}
-  spec.description   = %q{The Ruby Interface to the Analog Bridge API}
-  spec.homepage      = "https://github.com/analogbridge/analog-bridge-ruby"
+  spec.summary       = %q{Import any analog media format into your cloud app}
+  spec.description   = %q{Enable users to import any analog media format directly into your app with the Analog Bridge API}
+  spec.homepage      = "https://analogbridge.io"
   spec.license       = "MIT"
 
   spec.require_paths = ["lib"]
   spec.files         = `git ls-files`.split("\n")
   spec.test_files    = `git ls-files -- {spec}/*`.split("\n")
+  spec.required_ruby_version = Gem::Requirement.new(">= 2.1.9")
 
   spec.add_dependency "rest-client", "~> 2.0"
 
