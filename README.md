@@ -2,6 +2,8 @@
 
 [![Build
 Status](https://travis-ci.org/analogbridge/analog-bridge-ruby.svg?branch=master)](https://travis-ci.org/analogbridge/analog-bridge-ruby)
+[![Code
+Climate](https://codeclimate.com/github/analogbridge/analog-bridge-ruby/badges/gpa.svg)](https://codeclimate.com/github/analogbridge/analog-bridge-ruby)
 
 Analog Bridge is comprised of a JavaScript client and REST API which enables
 your users to import analog media directly into your app or website.
@@ -78,7 +80,7 @@ example to find a customer with details with id `cus_12345678`
 AnalogBridge::Customer.find("cus_12345678")
 ```
 
-### Retrieve all customers
+#### Retrieve all customers
 
 Analog Bridge provides an interface to retrieve all your customers very easily.
 To retrieve all of your customers, you can use
@@ -141,7 +143,9 @@ To retrieve the list of import ready orders, we can use
 AnalogBridge::Order.import_ready
 ```
 
-### Listing Product
+### Product
+
+#### Listing products
 
 To retrieve the `products` simply use the following interface
 
@@ -200,8 +204,23 @@ AnalogBridge::Customer.list
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/analogbridge/analog-bridge-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+First, thank you for contributing! We love pull requests from everyone. By
+participating in this project, you hereby grant the right to grant or transfer
+an unlimited number of non exclusive licenses or sub-licenses to third parties,
+under the copyright covering the contribution to use the contribution by all
+means.
 
+Here are a few technical guidelines to follow:
+
+1. Open an [issue][issues] to discuss a new feature.
+1. Write tests to support your new feature.
+1. Make sure the entire test suite passes locally and on CI.
+1. Open a Pull Request.
+1. [Squash your commits][squash] after receiving feedback.
+1. Party!
+
+[issues]: https://github.com/analogbridge/analog-bridge-ruby/issues
+[squash]: https://github.com/thoughtbot/guides/tree/master/protocol/git#write-a-feature
 
 ## License
 
