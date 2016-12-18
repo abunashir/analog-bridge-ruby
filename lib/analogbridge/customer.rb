@@ -6,7 +6,7 @@ module AnalogBridge
       )
     end
 
-    def all(limit: 20, offset: 0)
+    def list(limit: 20, offset: 0)
       AnalogBridge.get_resource(
         "customers?limit=#{limit}&offset=#{offset}",
       )

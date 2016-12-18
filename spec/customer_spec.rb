@@ -48,11 +48,11 @@ RSpec.describe AnalogBridge::Customer do
     end
   end
 
-  describe ".all" do
+  describe ".list" do
     it "retrieve all the customers" do
       filters = { limit: "2", offset: "10" }
       stub_analogbridge_customer_listting(filters)
-      customers = AnalogBridge::Customer.all(filters)
+      customers = AnalogBridge::Customer.list(filters)
 
       expect(customers.offset).to eq(10)
       expect(customers.list.count).to eq(2)

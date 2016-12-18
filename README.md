@@ -150,7 +150,7 @@ AnalogBridge::Order.import_ready
 To retrieve the `products` simply use the following interface
 
 ```ruby
-AnalogBridge::Product.all
+AnalogBridge::Product.list
 ```
 
 ## Development
