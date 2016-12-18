@@ -28,8 +28,7 @@ $ gem install analogbridge
 
 ## Configure
 
-Once you have your API Secret keys from Analog Bridge, then you can add an
-initializer to set up your `secret_key` as
+Once you have your API Keys from Analog Bridge, you can initialize your configuration with your `secret_key` as
 
 ```ruby
 AnalogBridge.configure do |config|
@@ -72,7 +71,7 @@ AnalogBridge::Customer.create(
 
 #### Retrieve a Customer
 
-We can easily retrieve a customer details using their `customer_id`, for
+We can easily retrieve a customer's details using their `customer_id`, for
 example to find a customer with details with id `cus_12345678`
 
 ```ruby
@@ -81,8 +80,8 @@ AnalogBridge::Customer.find("cus_12345678")
 
 ### Retrieve all customers
 
-Analog Bridge provides an interface to retrieve all your customers very easily,
-to retrieve all of your customers, you can use
+Analog Bridge provides an interface to retrieve all your customers very easily.
+To retrieve all of your customers, you can use
 
 ```ruby
 AnalogBridge::Customer.list(limit: 20, offset: 100)
@@ -104,8 +103,7 @@ AnalogBridge::Customer.update(
 
 #### Delete a customer
 
-If we need to delete a customer for some reason, then the API got us covered,
-for example if we want to delete a customer with id `cus_123456789` then we can
+If we need to delete a customer, for example id `cus_123456789`, then we can
 use
 
 ```ruby
@@ -116,15 +114,15 @@ AnalogBridge::Customer.delete("cus_123456789")
 
 #### List all orders
 
-The Analog Bridge API allow us to retrieve all orders by specific `customer`.
-For example we want to retrieve all the `order` by a customer id `cus_12345678`
-then we can use
+The Analog Bridge API allow us to retrieve all orders by a specific `customer`.
+For example we want to retrieve all `orders` by customer id `cus_12345678`,
+we can use
 
 ```ruby
 AnalogBridge::Order.where(customer_id: "cus_12345678")
 ```
 
-#### List a order details
+#### List order details
 
 If we need to retrieve the details for a specific order then we can use
 
@@ -136,8 +134,8 @@ AnalogBridge::Order.where(
 ```
 
 #### Retrieve import ready orders
-
-To retrieve the list of of import ready orders, we can use
+Once customer orders have been processed and uploaded to our Cloud, they are import-ready for your system.
+To retrieve the list of import ready orders, we can use
 
 ```ruby
 AnalogBridge::Order.import_ready
